@@ -1,0 +1,193 @@
+.-autogeom-body{
+    background-color: #000000; /* Couleur de fond de la carte */
+    padding: 0px;
+    margin-bottom: 5px
+}
+#map {
+    position: relative;
+    z-index: 2;
+    height: calc(69vh);
+    /* cursor: pointer; */
+}
+.leaflet-control-attribution {
+    display: none;
+}
+.btn-custom-auto{
+    background-color: whitesmoke;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+.btn-custom-contenance-sig{
+    background-color: whitesmoke;
+    font-size: 14px;
+    text-align: center;
+    user-select: none;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    width: fit-content;
+
+}
+.btn-echelle{
+    transform: rotate(180deg); /* Rotation de 45° */
+}
+.btn-check-ecw:checked + .btn-custom-auto.btn-ecw {
+    background-color: #ff4500; /* Change de couleur quand l'input est coché */
+    color: white; /* Change la couleur du texte, si nécessaire */
+}
+.btn-check-polygon:checked + .btn-custom-auto.btn-polygon {
+    background-color: #0088ff; /* Change de couleur quand l'input est coché */
+    color: white; /* Change la couleur du texte, si nécessaire */
+}
+.btn-check-rotation-right:checked + .btn-custom-auto.btn-rotation-right {
+    background-color: #0088ff; /* Change de couleur quand l'input est coché */
+    color: white; /* Change la couleur du texte, si nécessaire */
+}
+.btn-check-deplace:checked + .btn-custom-auto.btn-deplace {
+    background-color: #0088ff; /* Change de couleur quand l'input est coché */
+    color: white; /* Change la couleur du texte, si nécessaire */
+}
+.btn-check-echelle:checked + .btn-custom-auto.btn-echelle {
+    background-color: #0088ff; /* Change de couleur quand l'input est coché */
+    color: white; /* Change la couleur du texte, si nécessaire */
+}
+.hr-line{
+    border-top: 2px solid black;
+    margin: 15px 5px 15px 5px;
+}
+.btn-image{
+    background-color: whitesmoke;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.custom-border {
+    position: relative;
+    padding: 20px 5px 2px 5px;
+    border: 1px solid #8f9296;
+    border-radius: 0.25rem;
+}
+.custom-title {
+    position: absolute;
+    top: -10px;
+    left: 7px;
+    background-color: #fff;
+    padding: 0 5px;
+    font-size: 16px;
+}
+.modal-body{
+    padding: 0px 20px 0px 20px;
+}
+.barre-outils{
+    flex: 0 0 auto;
+    width: 5%;
+}
+.cart-view{
+    flex: 0 0 auto;
+    width: 78%;
+}
+.calque{
+    flex: 0 0 auto;
+    width: 17%;
+}
+#inputRange {
+    margin-top: 10px;
+    width: 100%; /* Ajuster selon les besoins */
+}
+/*Modification du option leaflet*/
+.leaflet-draw-draw-polyline, .leaflet-draw-draw-polygon, .leaflet-draw-edit-edit, .leaflet-draw-edit-remove{
+    background-color: whitesmoke !important;
+    background-position: 5px 5px;
+    display: inline-block !important;
+    font-weight: 400 !important;
+    line-height: 1.5 !important;
+    color: #212529 !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    vertical-align: middle !important;
+    cursor: pointer !important;
+    -moz-user-select: none !important;
+    user-select: none !important;
+    border: 1px solid transparent !important;
+    border-radius: .25rem !important;
+    margin: 3px;
+   
+}
+.leaflet-control {
+    float: none !important;
+    clear: both;
+}
+.leaflet-bar {
+    box-shadow: none;
+    border-radius: 0px;
+    margin: 0px;
+}
+.leaflet-draw-actions {
+    left: 39px;
+}
+.leaflet-editing-icon {    
+    margin-left: -2px!important;
+    margin-top: -2px!important;
+    height: 0.4rem!important;
+    width: 0.4rem!important;
+    display: inline-block!important;
+}
+/* Style pour la div noire qui suit la souris */
+#drag-div {
+    pointer-events: none; /* Cette propriété permet d'éviter que la div interfère avec les clics sur la carte */
+    opacity: 0.5; /* Ajouter un peu de transparence pour mieux voir la carte en dessous */
+    position: absolute; /* Assurez-vous que la div est positionnée par rapport à la carte */
+    z-index: 401; /* Div au-dessus de la carte */
+}
+#rot-div {
+    z-index: 401;
+    position: absolute;
+    transform-origin: top left; /* Point de rotation en bas à gauche */
+    transition: transform 0.1s ease; /* Pour une transition plus fluide lors du clic */
+    opacity: 0.5;
+}
+.size-text-custom{
+   font-size: 13px; 
+}
+.custom-row-info-plan{
+    border-bottom: #c6c3c3 1px solid;
+    --bs-gutter-x: -0.5rem;
+}
+
+/*Image modal insertion plan*/
+.custom-bs-gutteur-x{
+    --bs-gutter-x: 0rem;
+}
+#imagePreview {
+    width: 750px;
+    height: 500px;
+    border: 2px dashed #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    background-color: #f8f9fa;
+    cursor: grab;
+}
+
+#imagePreview img {
+    max-width: 100%;
+    max-height: 100%;
+    transition: transform 0.2s ease;
+    user-select: none; /* Empêche la sélection de l'image lors du déplacement */
+}
