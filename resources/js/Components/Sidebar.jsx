@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./Sidebar.css";
+import { Head, Link, useForm } from '@inertiajs/react';
 export default function Sidebar() {
     const [expanded, setExpanded] = useState(false);
    
@@ -187,13 +188,21 @@ export default function Sidebar() {
                     <i className="mdi mdi-account"></i>
                     <span>Profile</span>
                 </a>
-                <a href="/deconnexion" className="sidebar-link">
+                <a href={route('logout')} className="sidebar-link">
                     <i
                         className="mdi mdi-logout"
                         style={{ color: "#ff210d" }}
                     ></i>
                     <span>Déconnexion</span>
                 </a>
+                 <Link
+                        href={route('logout')}
+                        method="post"
+                        as="button"
+                        className="rounded-md text-sm text-gray-600 underline hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                    >
+                        Log Out
+                    </Link>
             </div>
         </aside>
     );

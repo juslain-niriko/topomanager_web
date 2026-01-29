@@ -10,6 +10,7 @@
     <link href="{{ asset('assets/mdi/css/materialdesignicons.min.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/fontawesome-free-6.6.0-web/css/all.min.css') }}" rel="stylesheet">
     <script src="{{ asset('assets/jquery-3.4.1.min.js') }}"></script>
+    @routes
     @viteReactRefresh
     @vite('resources/js/app.jsx')
     @inertiaHead
