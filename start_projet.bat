@@ -2,7 +2,7 @@
 title Lancement Projet Laravel + Vite
 
 REM === Chemin du projet ===
-cd /d D:\tpm\Topomanager_web
+cd /d C:\Users\Michna\Documents\topomanager_web
 
 echo ===============================
 echo   Lancement du BACKEND
